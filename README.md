@@ -1,6 +1,6 @@
 <div>
   <h1 align='center'>
-    randomstuff.py
+    randfunc
   </h1>
 </div>
 <div>
