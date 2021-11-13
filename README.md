@@ -1,5 +1,19 @@
-# randfunc
------------------------
+<div>
+  <h1 align='center'>
+    randomstuff.py
+  </h1>
+</div>
+<div>
+  <p align='center'>
+    <img src=https://img.shields.io/pypi/dm/randfunc?color=success&label=PyPi%20Downloads&style=flat-square>
+    <img src=https://img.shields.io/badge/Stable_Version-2.0.0-informational>
+    <img src=https://img.shields.io/badge/Development_Version-2.5.0-informational>
+  </p>
+  <p align='center'>
+    A simple and easy to use collection of random python functions.
+  </p>
+</div>
+<br>
 
 ### Installation
 - From source (for the latest untested version)
@@ -17,6 +31,15 @@ pip install randfunc
 ```
 >>> randfunc.string(10)
 'iDa7FZl7rW'
+```
+#### Prascii
+```
+>>> randfunc.prascii("hello")
+ _            _  _        
+| |__    ___ | || |  ___  
+| '_ \  / _ \| || | / _ \ 
+| | | ||  __/| || || (_) |
+|_| |_| \___||_||_| \___/ 
 ```
 #### Integer
 ```
