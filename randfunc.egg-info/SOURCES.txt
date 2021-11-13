@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+randfunc/__init__.py
+randfunc/__main__.py
+randfunc/about.py
+randfunc.egg-info/PKG-INFO
+randfunc.egg-info/SOURCES.txt
+randfunc.egg-info/dependency_links.txt
+randfunc.egg-info/top_level.txt
