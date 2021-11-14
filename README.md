@@ -6,8 +6,8 @@
 <div>
   <p align='center'>
     <img src=https://img.shields.io/pypi/dm/randfunc?color=success&label=PyPi%20Downloads&style=flat-square>
-    <img src=https://img.shields.io/badge/Stable_Version-2.0.0-informational>
-    <img src=https://img.shields.io/badge/Development_Version-2.5.0-informational>
+    <img src=https://img.shields.io/badge/Stable_Version-0.0.2-informational>
+    <img src=https://img.shields.io/badge/Development_Version-0.0.4-informational>
   </p>
   <p align='center'>
     A simple and easy to use collection of random python functions.
