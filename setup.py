@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="randfunc",
-    version="0.0.2",
+    version="0.0.3",
     author="Diwan Mohamed Faheer",
     author_email="diwanmohamedfaheer@gmail.com",
     description="A package full of random functions...",
