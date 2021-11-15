@@ -26,6 +26,7 @@ pip install randfunc
 ```
 -----------------------
 ### Example use
+
 #### Commentary
 ```
 >>> randfunc.commentary("Eat Grass")
