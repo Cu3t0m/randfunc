@@ -18,5 +18,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=["art==5.3", "instant-api-client==0.1.2", "colorama==0.4.4"],    
+    install_requires=["art==5.3", "instant-api-client==0.1.2", "colorama==0.4.4","Pillow","urllib3"],    
 )
