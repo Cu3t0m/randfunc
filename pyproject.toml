@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "repl_python3_randfunc"
+version = "0.1.0"
+description = ""
+authors = ["Cu3t0m <<>>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+apiclient = "^1.0.4"
+art = "^5.3"
+httpx = "^0.20.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

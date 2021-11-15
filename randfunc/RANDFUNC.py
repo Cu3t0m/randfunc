@@ -11,6 +11,40 @@ import urllib.request
 import json
 import httpx
 from apiclient import APIClient, Get, endpoint
+import os
+import time
+import colorama
+
+class Data:
+  def save(file, data):
+    trueFile = open(file)
+    file.write(data)
+
+  def load(file, data):
+    trueFile = open(file)
+    trueFile.readline(100)
+
+class Console:
+  def clear(isServer=True):
+    os.system("clear")
+
+  def commandPrompt(key, function):
+    main = input(">")
+    if main == key:
+      function()
+
+  def Commentary(text):
+    print(colorama.Style.DIM+ text + colorama.Style.NORMAL)
+    
+  def Warn(text):
+    print(colorama.Fore.RED + text + colorama.Fore.RESET)
+
+class Misc:
+  def Wait(interval):
+    time.sleep(interval)
+
+  def Help():
+    print("Randfunc is a python module made to make life easier and consists of many commands.\n\n\n")
 
 
 class BaseClient(APIClient):
