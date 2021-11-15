@@ -3,7 +3,7 @@ from .RANDFUNC import *
 __title__ = "randfunc"
 __summary__ = "Randfunc is a collection of random functions."
 __uri__ = "https://github.com/Cu3t0m/randfunc"
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 __author__ = "Custom"
 __email__ = "diwanmohamedfaheer@gmail.com"
 __license__ = "MIT License"

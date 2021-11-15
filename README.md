@@ -26,7 +26,34 @@ pip install randfunc
 ```
 -----------------------
 ### Example use
-
+#### Commentary
+```
+>>> randfunc.commentary("Eat Grass")
+'Eat Grass'
+```
+This will be in grey.
+#### Clear
+```
+>>> randfunc.clear()
+''
+```
+#### Warn
+```
+>>> randfunc.string("I like Chicken")
+'I like Chicken'
+```
+This will be in red.
+#### Wait
+```
+>>> randfunc.wait(10)
+'10'
+```
+This happens after 10 seconds
+#### Clear
+```
+>>> randfunc.clear()
+'iDa7FZl7rW'
+```
 #### String
 ```
 >>> randfunc.string(10)
