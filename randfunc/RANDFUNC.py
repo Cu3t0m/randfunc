@@ -15,6 +15,7 @@ import os
 import time
 import colorama
 
+
 class Data:
   def save(file, data):
     trueFile = open(file)
@@ -346,86 +347,87 @@ def number_game():
     else:
         print("That's cool, have a good one!")
 
-def hello():
-    print("hi")
+class Other:
+  def hello():
+      print("hi")
 
-def prascii(str):
-  tprint(str)
+  def prascii(str):
+    tprint(str)
 
-def string(length, chars='', uppercase=True, lowercase=True, digits=True):
-    if chars == '':
-        chars += st.ascii_uppercase if uppercase else ''
-        chars += st.ascii_lowercase if lowercase else ''
-        chars += st.digits if digits else ''
+  def string(length, chars='', uppercase=True, lowercase=True, digits=True):
+      if chars == '':
+          chars += st.ascii_uppercase if uppercase else ''
+          chars += st.ascii_lowercase if lowercase else ''
+          chars += st.digits if digits else ''
 
-    return ''.join(random.choice(chars) for _ in range(length))
-
-
-def integer(minimum, maximum, even=None):
-    if minimum > maximum:
-        raise ValueError('Minimum must not be bigger than maximum')
-
-    def check_value(val):
-        if even is True:
-            if (val % 2) != 0:
-                return False
-
-        if even is False:
-            if not (val & 0x1):
-                return False
-        return True
-
-    while True:
-        value = random.randint(minimum, maximum)
-        if check_value(value):
-            return value
+      return ''.join(random.choice(chars) for _ in range(length))
 
 
-def array(source, selection_size=1, duplicates=True):
-    if not duplicates and len(source) < selection_size:
-        raise ValueError('unable to select ' + str(selection_size) + ' elements from a list of size ' + str(len(source)))
+  def integer(minimum, maximum, even=None):
+      if minimum > maximum:
+          raise ValueError('Minimum must not be bigger than maximum')
 
-    selected_elements = []
-    for i in range(selection_size):
-        selected_element = random.choice(source)
-        selected_elements.append(selected_element)
-        if not duplicates:
-            source.remove(selected_element)
+      def check_value(val):
+          if even is True:
+              if (val % 2) != 0:
+                  return False
 
-    return selected_elements
+          if even is False:
+              if not (val & 0x1):
+                  return False
+          return True
 
-
-def datetime(start=dt.datetime(year=1970, month=1, day=1), end=dt.datetime(year=2050, month=1, day=1)):
-    delta = end - start
-    delta_microseconds = (delta.days * 86400000000) + (delta.seconds * 1000000) + delta.microseconds
-
-    microseconds = integer(0, delta_microseconds)
-    return start + dt.timedelta(microseconds=microseconds)
+      while True:
+          value = random.randint(minimum, maximum)
+          if check_value(value):
+              return value
 
 
-def mail(length_local=7, length_domain=5, domain_ending='com'):
-    if length_local > 64:
-        raise ValueError('local part must not be longer than 64 characters')
+  def array(source, selection_size=1, duplicates=True):
+      if not duplicates and len(source) < selection_size:
+          raise ValueError('unable to select ' + str(selection_size) + ' elements from a list of size ' + str(len(source)))
 
-    if (length_local + length_domain + len(domain_ending)) > 254:
-        raise ValueError('mail address must not be longer than 254 characters')
+      selected_elements = []
+      for i in range(selection_size):
+          selected_element = random.choice(source)
+          selected_elements.append(selected_element)
+          if not duplicates:
+              source.remove(selected_element)
 
-    return string(length_local) + '@' + string(length_domain) + '.' + domain_ending
-
-
-def mac_address(prefix=None):
-    mac = prefix.split(':') if prefix else list()
-    while len(mac) < 6:
-        mac.append('{:02x}'.format(integer(0, 255)))
-    return ':'.join(mac)
+      return selected_elements
 
 
-def ipv4address():
-    return '.'.join([str(integer(0, 255)) for _ in range(4)])
+  def datetime(start=dt.datetime(year=1970, month=1, day=1), end=dt.datetime(year=2050, month=1, day=1)):
+      delta = end - start
+      delta_microseconds = (delta.days * 86400000000) + (delta.seconds * 1000000) + delta.microseconds
+
+      microseconds = integer(0, delta_microseconds)
+      return start + dt.timedelta(microseconds=microseconds)
 
 
-def ipv6address():
-    return ':'.join('{:04x}'.format(integer(0, 65535)) for _ in range(8))
+  def mail(length_local=7, length_domain=5, domain_ending='com'):
+      if length_local > 64:
+          raise ValueError('local part must not be longer than 64 characters')
+
+      if (length_local + length_domain + len(domain_ending)) > 254:
+          raise ValueError('mail address must not be longer than 254 characters')
+
+      return string(length_local) + '@' + string(length_domain) + '.' + domain_ending
+
+
+  def mac_address(prefix=None):
+      mac = prefix.split(':') if prefix else list()
+      while len(mac) < 6:
+          mac.append('{:02x}'.format(integer(0, 255)))
+      return ':'.join(mac)
+
+
+  def ipv4address():
+      return '.'.join([str(integer(0, 255)) for _ in range(4)])
+
+
+  def ipv6address():
+      return ':'.join('{:04x}'.format(integer(0, 65535)) for _ in range(8))
 
 
 
